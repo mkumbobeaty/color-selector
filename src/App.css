@@ -81,8 +81,10 @@
   background-color: #dddddd;
 }
 .selected {
-  background-color: rgb(128, 0, 0);
+  border-radius: 8px ;
   text-transform: capitalize;
+  fill: #fff;
+  
 }
 .items-name {
   font-size: 1.3rem;
@@ -90,5 +92,4 @@
   display: flex;
   text-transform: capitalize;
   flex-wrap: wrap;
-  justify-content: space-between;
 }

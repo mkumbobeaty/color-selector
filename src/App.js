@@ -1,7 +1,5 @@
-import  { useEffect, createContext, useRef } from "react";
 import "./App.css";
 import List from "./components/select";
-import Input from "./components/input";
 
 const sizes = ["tiny", "small", "medium", "large", "huge"];
 const colors = [
@@ -58,25 +56,12 @@ const items = sizes.reduce(
   []
 );
 
-export const NumProvider = createContext()
-
 
 function App() {
-
-const userNameRef = useRef(null);
-const passRef = useRef(null)
-
-useEffect(() => {
-userNameRef.current.focus()
-}, []);
-
   return (
-    <NumProvider.Provider value={"hello Merry"}>
-      <Input ref={userNameRef} type="text" placeholder="Enter user Name" />
-      <Input ref={passRef} type="text" placeholder="Enter user password" />
-
+    <>
       <List items={items} />
-    </NumProvider.Provider>
+    </>
   );
 }
 

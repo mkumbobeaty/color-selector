@@ -1,5 +1,4 @@
-import { Fragment, useState, useContext, useMemo, useId } from "react";
-import { NumProvider } from "../App";
+import { Fragment, useState } from "react";
 
 // Implement a feature to allow item selection with the following requirements:
 // 1. Clicking an item selects/unselects it.
@@ -12,8 +11,6 @@ import { NumProvider } from "../App";
 
 const List = ({ items }) => {
   const [selected, setSelected] = useState([]);
-  const contextValue =  useContext(NumProvider);
-  console.log(contextValue)
 
   const handleSelect = (item) => {
     if (selected.includes(item)) {
@@ -22,9 +19,6 @@ const List = ({ items }) => {
     } else return setSelected([...selected, item]);
   };
 
-  const id = useId();
-
-  console.log(id)
  
   return (
     <Fragment>
